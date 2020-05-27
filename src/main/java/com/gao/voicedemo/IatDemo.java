@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
+import android.app.Application;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -430,6 +431,7 @@ public class IatDemo extends Activity implements OnClickListener {
 			mIat.cancel();
 			mIat.destroy();
 		}
+		android.os.Process.killProcess(android.os.Process.myPid());
 	}
 
 	@Override
